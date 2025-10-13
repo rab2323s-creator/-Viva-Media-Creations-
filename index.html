@@ -1,11 +1,22 @@
- <!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=ar.html">
-<title>Viva Media Creations</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viva Media Creations</title>
+  <script>
+    // التوجيه حسب لغة المتصفح
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith('ar')) {
+      window.location.href = 'ar.html';
+    } else if (lang.startsWith('de')) {
+      window.location.href = 'de.html';
+    } else {
+      window.location.href = 'en.html';
+    }
+  </script>
 </head>
 <body>
-<p>جارٍ إعادة التوجيه إلى الصفحة العربية...</p>
+  <p>جاري تحويلك إلى الصفحة المناسبة حسب لغة متصفحك...</p>
 </body>
 </html>
