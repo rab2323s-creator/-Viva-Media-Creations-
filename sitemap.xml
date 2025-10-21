@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://username.github.io/repo-name/ar.html</loc>
+    <loc>https://vivamediacreative.com/</loc>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://username.github.io/repo-name/en.html</loc>
-  </url>
-  <url>
-    <loc>https://username.github.io/repo-name/de.html</loc>
+    <loc>https://vivamediacreative.com/ar.html</loc>
+    <priority>0.8</priority>
   </url>
 </urlset>
