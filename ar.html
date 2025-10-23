@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -35,6 +35,7 @@
       <a href="#support">دعم صناع المحتوى</a>
       <a href="news.html">الأخبار</a>
       <a href="#contact">تواصل</a>
+      <a href="#apply" class="active">قدّم لوظيفة</a>
     </nav>
 
     <div class="lang">
@@ -130,7 +131,7 @@
   </div>
 </section>
 
-<!-- إنتاج وثائقي -->
+<!-- الإنتاج الوثائقي -->
 <section id="documentary" class="container section light">
   <h2 class="section-title">الإنتاج الوثائقي</h2>
   <div class="doc">
@@ -144,20 +145,26 @@
   </div>
 </section>
 
-<!-- انضم الينا -->
-<section id="join" class="container section">
-  <h2 class="section-title">هل أنت صانع محتوى أو تقدم برامج؟</h2>
-  <p>نبحث عن المواهب الشابة والمبدعين — إذا كان لديك الشغف والمهارة فنحن نقدم لك منصة ودعم كامل لتطوير موهبتك.</p>
-  <div class="cta-row">
-    <a class="btn" href="#contact">قدّم الآن</a>
-    <a class="btn btn-outline" href="mailto:info@vivamediacreative.com">أرسل سيرتك الذاتية</a>
-  </div>
-</section>
+<!-- تقديم وظيفة -->
+<section id="apply" class="container section light">
+  <h2 class="section-title">قدّم لوظيفة</h2>
+  <p>إذا كنت ترغب في الانضمام لفريقنا، أرسل سيرتك الذاتية مباشرة من هنا:</p>
 
-<!-- إدارة حسابات المشاهير -->
-<section id="celeb" class="container section light">
-  <h2 class="section-title">إدارة حسابات المشاهير على وسائل التواصل</h2>
-  <p>فريقنا من خبراء التسويق يعمل على تحليل السوق وتصميم محتوى يجذب المتابعين ويزيد التفاعل — نساعدك لتتألق وتصل للجماهير التي تستهدفها.</p>
+  <form action="https://formsubmit.co/info@vivamediacreative.com" method="POST" enctype="multipart/form-data" class="job-form">
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="position">المسمى الوظيفي المطلوب:</label>
+    <input type="text" id="position" name="position" required>
+
+    <label for="cv">ارفق سيرتك الذاتية (PDF / Word):</label>
+    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+    <button type="submit" class="btn">أرسل طلبك</button>
+  </form>
 </section>
 
 <!-- تواصل معنا -->
