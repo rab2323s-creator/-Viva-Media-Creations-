@@ -35,6 +35,7 @@
       <a href="#support">Content-Support</a>
       <a href="news_de.html">Nachrichten</a>
       <a href="#contact">Kontakt</a>
+      <a href="#apply">Karriere / Jobs</a>
     </nav>
 
     <div class="lang">
@@ -144,20 +145,29 @@
   </div>
 </section>
 
-<!-- JOIN US -->
-<section id="join" class="container section">
-  <h2 class="section-title">Sind Sie Content Creator oder Programmproduzent?</h2>
-  <p>Wir suchen junge Talente und Kreative — wenn Sie Leidenschaft und Können mitbringen, bieten wir Plattform und volle Unterstützung zur Entfaltung Ihres Talents.</p>
-  <div class="cta-row">
-    <a class="btn" href="#contact">Jetzt Bewerben</a>
-    <a class="btn btn-outline" href="mailto:info@vivamediacreative.com">Lebenslauf senden</a>
-  </div>
-</section>
+<!-- JOB APPLICATION / BEWERBEN -->
+<section id="apply" class="container section light">
+  <h2 class="section-title">Karriere / Jobs — Werden Sie Teil von Viva Media Creative</h2>
+  <p>Wenn Sie unserem Team beitreten möchten, senden Sie hier Ihren Lebenslauf direkt:</p>
 
-<!-- CELEBRITY MANAGEMENT -->
-<section id="celeb" class="container section light">
-  <h2 class="section-title">Promi-Account-Management in sozialen Medien</h2>
-  <p>Unsere Marketing-Experten analysieren den Markt und erstellen Inhalte, die Follower anziehen und Engagement steigern — damit Sie glänzen und Ihre Zielgruppe erreichen.</p>
+  <form action="https://formsubmit.co/vivamediacreations@gmail.com" method="POST" enctype="multipart/form-data" class="job-form">
+    <label for="name">Vollständiger Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">E-Mail-Adresse:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="position">Gewünschte Position:</label>
+    <input type="text" id="position" name="position" required>
+
+    <label for="cv">Lebenslauf anhängen (PDF / Word):</label>
+    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+    <!-- Redirect nach Absenden -->
+    <input type="hidden" name="_next" value="https://vivamediacreative.com/thank-you.html">
+
+    <button type="submit" class="btn">Bewerbung senden</button>
+  </form>
 </section>
 
 <!-- CONTACT -->
