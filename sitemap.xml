@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الرئيسية -->
   <url>
     <loc>https://vivamediacreative.com/</loc>
     <priority>1.0</priority>
@@ -9,11 +11,44 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vivamediacreative.com/de.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://vivamediacreative.com/en.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vivamediacreative.com/de.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- أخبار -->
+  <url>
+    <loc>https://vivamediacreative.com/news.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vivamediacreative.com/news_en.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vivamediacreative.com/news_de.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- مقالات الأخبار (إن وُجدت) -->
+  <url>
+    <loc>https://vivamediacreative.com/article.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vivamediacreative.com/article2.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vivamediacreative.com/article3.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vivamediacreative.com/article4.html</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
