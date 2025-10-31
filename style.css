@@ -101,6 +101,8 @@ body {
   position: relative;
   z-index: 2;
   max-width: 850px;
+ text-align: right;
+  transform: translateX(-5%); /* ← ازاحة بسيطة نحو اليسار */
 }
 .hero-text h2 {
   font-size: 46px;
