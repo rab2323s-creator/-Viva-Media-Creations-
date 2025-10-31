@@ -58,6 +58,7 @@ body{
   display:flex;
   gap:16px;
   flex-wrap:wrap;
+  transition: all 0.3s ease;
 }
 .main-nav a{
   color:var(--text);
@@ -69,9 +70,13 @@ body{
 /* Hamburger */
 .hamburger{
   display:none;
-  font-size:24px;
+  font-size:26px;
   cursor:pointer;
   user-select:none;
+  transition: transform 0.3s ease;
+}
+.hamburger:hover{
+  transform:rotate(90deg);
 }
 
 /* HERO */
@@ -179,10 +184,31 @@ body{
 @media (max-width:900px){.support-grid{grid-template-columns:1fr}.doc{flex-direction:column;gap:12px}.doc-img{width:100%;max-width:100%}}
 @media (max-width:700px){
   .header-inner{flex-direction:row;justify-content:space-between;align-items:center;gap:8px}
-  .main-nav{display:none;flex-direction:column;width:100%;background:#fff;position:absolute;top:64px;right:0;box-shadow:0 4px 12px rgba(0,0,0,0.1);padding:12px;border-radius:0 0 12px 12px}
-  .main-nav.active{display:flex}
+  
+  .main-nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#fff;
+    position:absolute;
+    top:64px;
+    right:0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    padding:12px;
+    border-radius:0 0 12px 12px;
+    opacity:0;
+    transform:translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  .main-nav.active{
+    display:flex;
+    opacity:1;
+    transform:translateY(0);
+  }
   .main-nav a{font-size:14px;padding:8px 12px}
+  
   .hamburger{display:block}
+
   .hero{padding:40px 20px}
   .hero h2{font-size:24px}
   .hero .lead{font-size:14px}
