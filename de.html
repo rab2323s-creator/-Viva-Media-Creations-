@@ -217,8 +217,16 @@
   // Hamburger Menü für Mobilgeräte
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('main-nav');
+
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
+  });
+
+  // Schließen Sie das Menü, wenn auf einen Link geklickt wird
+  document.querySelectorAll('#main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
   });
 </script>
 
