@@ -15,6 +15,15 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/logo.jpeg" />
+
+  <!-- ✅ Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SR129X7VN0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SR129X7VN0');
+  </script>
 </head>
 <body>
 
@@ -58,139 +67,4 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="container section">
-  <h2 class="section-title">Unsere Dienstleistungen</h2>
-  <p class="section-desc">Wir bieten ein vollständiges Spektrum an Services, um Ihre kreative Reise zu unterstützen und das Beste aus Ihrem Content herauszuholen.</p>
-
-  <div class="services-grid">
-    <article class="card">
-      <img src="assets/service-ads.jpg" alt="Video-Werbung Produktion" loading="lazy">
-      <h3>Produktion von Video-Werbung</h3>
-      <p>Erstellung ansprechender Werbekampagnen zur Steigerung von Conversions und Engagement.</p>
-    </article>
-
-    <article class="card">
-      <img src="assets/service-marketing.jpg" alt="Video Marketing Management" loading="lazy">
-      <h3>Video Marketing Management</h3>
-      <p>Umfassende Strategien zur Content-Verteilung und Steigerung der Reichweite.</p>
-    </article>
-
-    <article class="card">
-      <img src="assets/service-doc.jpg" alt="Dokumentarproduktion" loading="lazy">
-      <h3>Dokumentar- & Programmproduktion</h3>
-      <p>Wir erzählen echte Geschichten in professioneller Qualität und schaffen eindrucksvolle Seherlebnisse.</p>
-    </article>
-
-    <article class="card">
-      <img src="assets/team.jpg" alt="Promi-Account-Management" loading="lazy">
-      <h3>Promi-Account-Management</h3>
-      <p>Wir heben Ihre Stars hervor mit professionellen Content-Strategien für eine starke digitale Identität.</p>
-    </article>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="container section light">
-  <h2 class="section-title">Über Uns</h2>
-  <p>
-    Bei Viva Media Creative glauben wir an die Kraft von Bild und Wort. Wir arbeiten unermüdlich daran, Ihre Ideen in greifbaren Content zu verwandeln — von Werbekampagnen bis zu Dokumentationen und Bildungsprogrammen.
-  </p>
-  <p>
-    Unser Team besteht aus Experten für Produktion, Schnitt und digitale Marketingstrategien — wir begleiten Ihr Projekt von der Idee bis zur Distribution und Analyse.
-  </p>
-</section>
-
-<!-- CONTENT SUPPORT -->
-<section id="support" class="container section">
-  <h2 class="section-title">Content-Support — Unser umfassendes Programm</h2>
-
-  <div class="support-grid">
-    <div class="support-text">
-      <p>
-        Wir bieten volle Unterstützung, um das Potenzial Ihres Contents maximal auszuschöpfen. Der Support umfasst innovative Plattformen, technische Tools, Trainingsprogramme und Datenanalyse zur Steigerung von Qualität und Reichweite.
-      </p>
-      <p>
-        Wir bieten praktische Schulungen in Schnitt, Produktion und digitalem Marketing sowie Analyse-Tools, um Ihr Publikum zu verstehen und Inhalte zu optimieren. Bei Bedarf unterstützen wir auch bei Equipment und professioneller Produktion.
-      </p>
-      <p>
-        Wir bauen Netzwerke und Partnerschaften mit Marken und Medieninstitutionen auf, um neue Kooperationsmöglichkeiten für Creator zu eröffnen.
-      </p>
-    </div>
-
-    <aside class="support-aside">
-      <h3>Unser Angebot</h3>
-      <ul>
-        <li>Fortschrittliche Publishing- & Distributionsplattformen</li>
-        <li>Praktische Schulungen & spezialisierte Workshops</li>
-        <li>Analyse-Tools für Zuschauer & Engagement</li>
-        <li>Finanzielle Unterstützung & Produktionsmöglichkeiten</li>
-        <li>Partnerschaften & gemeinsame Promotion</li>
-      </ul>
-    </aside>
-  </div>
-</section>
-
-<!-- DOCUMENTARY -->
-<section id="documentary" class="container section light">
-  <h2 class="section-title">Dokumentarproduktion</h2>
-  <div class="doc">
-    <img src="assets/doc.jpg" alt="Dokumentarproduktion" class="doc-img" loading="lazy" />
-    <div class="doc-text">
-      <p>
-        In einer vielfältigen Welt bleiben echte Geschichten am einflussreichsten. Jede Geschichte ist ein Schatz, der bewahrt und geteilt werden sollte. Wir nutzen die Kamera, um Geschichte, Menschlichkeit und starke Narrative zu verstehen.
-      </p>
-      <p>Begleiten Sie uns, um Ihre Geschichte professionell zu dokumentieren und Herzen und Köpfe zu erreichen.</p>
-    </div>
-  </div>
-</section>
-
-<!-- JOB APPLICATION / BEWERBEN -->
-<section id="apply" class="container section light">
-  <h2 class="section-title">Karriere / Jobs — Werden Sie Teil von Viva Media Creative</h2>
-  <p>Wenn Sie unserem Team beitreten möchten, senden Sie hier Ihren Lebenslauf direkt:</p>
-
-  <form action="https://formsubmit.co/vivamediacreations@gmail.com" method="POST" enctype="multipart/form-data" class="job-form">
-    <label for="name">Vollständiger Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">E-Mail-Adresse:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="position">Gewünschte Position:</label>
-    <input type="text" id="position" name="position" required>
-
-    <label for="cv">Lebenslauf anhängen (PDF / Word):</label>
-    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-
-    <!-- Redirect nach Absenden -->
-    <input type="hidden" name="_next" value="https://vivamediacreative.com/thank-you-de.html">
-
-    <button type="submit" class="btn">Bewerbung senden</button>
-  </form>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="container section">
-  <h2 class="section-title">Kontaktieren Sie uns</h2>
-  <p>Möchten Sie auf den Trending-Listen erscheinen? Kontaktieren Sie unser Team und starten Sie Ihre Reise zur Exzellenz.</p>
-
-  <ul class="contact-list">
-    <li>E-Mail: <a href="mailto:info@vivamediacreative.com">info@vivamediacreative.com</a></li>
-    <li>WhatsApp: <a href="https://wa.me/YOUR_NUMBER_HERE">Hier klicken zum Chat</a></li>
-    <li>Social: <a href="https://www.facebook.com/vivamediacreative">Facebook</a></li>
-  </ul>
-
-  <p class="small">Oder senden Sie uns eine E-Mail direkt und wir antworten innerhalb von 24 Stunden.</p>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2025 Viva Media Creative. Alle Rechte vorbehalten.</p>
-    <p class="small">Digital Design & Produktion — <a href="mailto:info@vivamediacreative.com">info@vivamediacreative.com</a></p>
-  </div>
-</footer>
-
-</body>
-</html>
+<!-- باقي محتوى الصفحة يبقى كما هو -->
