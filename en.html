@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/logo.jpeg">
 
+  <!-- Google Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SR129X7VN0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -185,7 +186,7 @@
 
   <ul class="contact-list">
     <li>Email: <a href="mailto:info@vivamediacreative.com">info@vivamediacreative.com</a></li>
-    <li>WhatsApp: <a href="https://wa.me/YOUR_NUMBER_HERE">Click to chat</a></li>
+    <li>WhatsApp: <a href="https://wa.me/15565678291">Click to chat</a></li>
     <li>Social Media: <a href="https://www.facebook.com/vivamediacreative">Facebook</a></li>
   </ul>
 
@@ -208,12 +209,27 @@
   </div>
 </footer>
 
+<!-- ✅ FIXED Hamburger Menu Script -->
 <script>
+document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('main-nav');
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
+  
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when any link is clicked
+    const links = nav.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+  }
+});
 </script>
+
 </body>
 </html>
