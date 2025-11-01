@@ -103,7 +103,7 @@ body {
   position: relative;
   z-index: 2;
   max-width: 850px;
-  margin-right: 40%; /* ← إزاحة بسيطة نحو اليمين */
+  margin-right: 70%; /* ← إزاحة بسيطة نحو اليمين */
 }
 
 .hero-text h2 {
