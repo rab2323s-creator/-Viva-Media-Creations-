@@ -29,49 +29,117 @@ body {
   padding: 40px 0;
 }
 
-/* Header */
+/* ================== HEADER ================== */
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 40;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+  transition: all 0.4s ease;
 }
+
+/* تأثير التمرير */
+.site-header.scrolled {
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+/* توزيع العناصر */
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 12px 0;
+  justify-content: center;
+  padding: 14px 5%;
+  gap: 60px;
   flex-wrap: wrap;
+  max-width: 1300px;
+  margin: auto;
 }
+
+/* توزيع القوائم يمين ويسار */
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+/* عناصر القائمة */
+.main-nav a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fefefe;
+  letter-spacing: 0.5px;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* الخط الذهبي المتدرج */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #ffcc00, #ffd700);
+  transition: width 0.35s ease;
+  border-radius: 2px;
+}
+.main-nav a:hover {
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+.main-nav a:hover::after { width: 100%; }
+
+/* العنصر النشط */
+.main-nav a.active { color: #ffd700; }
+.main-nav a.active::after { width: 100%; }
+
+/* الشعار */
 .brand {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
-.logo { width: 80px; height: auto; border-radius: 8px; }
-.brand-text h1 { margin: 0; font-size: 18px; }
-.brand-text .tag { margin: 0; font-size: 13px; color: var(--muted); }
+.logo {
+  width: 70px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,215,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,215,0,0.45);
+}
+.brand-text h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.brand-text .tag {
+  font-size: 13px;
+  color: #ccc;
+  margin: 0;
+}
 
-/* Nav */
-.main-nav {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  transition: all 0.3s ease;
-}
-.main-nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-/* Hamburger */
+/* زر الموبايل */
 .hamburger {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
+  color: #fff;
   cursor: pointer;
   user-select: none;
   transition: transform 0.3s ease;
@@ -81,16 +149,16 @@ body {
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  background-image: url('assets/hero.jpg'); /* ✅ الصورة الصحيحة */
+  background-image: url('assets/hero.jpg');
   background-size: cover;
-  background-position: center right; /* الفتاة في اليمين */
+  background-position: center right;
   padding: 140px 0;
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* النص على اليسار */
+  justify-content: flex-start;
   text-align: left;
-  direction: ltr; /* عكس الاتجاه فقط في هذا القسم */
+  direction: ltr;
   overflow: hidden;
 }
 
@@ -278,63 +346,9 @@ body {
 .lead { font-size: 16px; color: var(--muted); }
 .section .btn { margin-top: 12px; }
 
-/* RESPONSIVE */
-@media (max-width:1000px){ .services-grid{grid-template-columns:1fr;} }
-@media (max-width:900px){
-  .support-grid{grid-template-columns:1fr;}
-  .doc{flex-direction:column;gap:12px;}
-  .doc-img{width:100%;max-width:100%;}
-}
-@media (max-width:700px){
-  .header-inner{
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
-    gap:8px;
-  }
-  .main-nav{
-    display:none;
-    flex-direction:column;
-    width:100%;
-    background:#fff;
-    position:absolute;
-    top:64px;
-    right:0;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    padding:12px;
-    border-radius:0 0 12px 12px;
-    opacity:0;
-    transform:translateY(-10px);
-    transition: all 0.3s ease;
-  }
-  .main-nav.active{
-    display:flex;
-    opacity:1;
-    transform:translateY(0);
-  }
-  .main-nav a{font-size:14px;padding:8px 12px;}
-  .hamburger{display:block;}
-
-  .hero{
-    padding:80px 20px;
-    justify-content:center;
-    text-align:center;
-    direction: rtl;
-  }
-  .hero-content{
-    margin-left:0;
-    background: rgba(0,0,0,0.5);
-    padding:25px;
-  }
-  .hero-text h2{font-size:28px;}
-  .hero-text .lead{font-size:15px;}
-  .hero-icons{
-    justify-content:center;
-  }
-  .hero-icons img{height:34px;}
-  .footer-inner{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:6px;
-  }
+/* ================= RESPONSIVE ================= */
+@media (max-width:950px) {
+  .header-inner { flex-direction: column; gap: 14px; }
+  .nav-left, .nav-right { flex-direction: column; gap: 14px; }
+  .main-nav a { font-size: 16px; }
 }
