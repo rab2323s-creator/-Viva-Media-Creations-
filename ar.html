@@ -13,7 +13,6 @@
   <link rel="alternate" hreflang="de" href="https://vivamediacreative.com/de.html" />
   <link rel="alternate" hreflang="x-default" href="https://vivamediacreative.com/en.html" />
 
-  <!-- رابط CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/logo.jpeg">
 
@@ -39,14 +38,14 @@
       </div>
     </div>
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <div class="hamburger" id="hamburger" aria-label="فتح القائمة">☰</div>
 
     <nav class="main-nav" id="main-nav" aria-label="القائمة الرئيسية">
       <a href="ar.html">الرئيسية</a>
       <a href="#services">الخدمات</a>
       <a href="#about">من نحن</a>
       <a href="#support">دعم صناع المحتوى</a>
-      <a href="#documentary">الإنتاج الوثائقي</a>
+      <a href="news.html">الأخبار</a>
       <a href="#contact">تواصل</a>
       <a href="#apply" class="active">فرص عمل</a>
     </nav>
@@ -127,10 +126,10 @@
   <div class="support-grid">
     <div class="support-text">
       <p>
-        نحن هنا لنقدّم لكم الدعم الكامل، ونسعى لتحقيق أقصى استفادة من المحتوى المرئي الذي تقدمونه. الدعم يشمل منصات مبتكرة، أدوات تقنية، برامج تدريبية، وتحليل بيانات لتعزيز جودة المحتوى وزيادة وصوله.
+        نحن هنا لنقدّم لكم الدعم الكامل، ونسعى لتحقيق أقصى استفادة من المحتوى المرئي الذي تقدمونه.
       </p>
       <p>
-        نقدم برامج تدريبية عملية في التحرير والإنتاج والتسويق الرقمي، وأدوات تحليل تُمكّنكم من فهم جمهوركم وتحسين أنواع المحتوى. كما نساعد في تأمين معدات وإنتاج احترافي عند الحاجة.
+        نقدم برامج تدريبية عملية في التحرير والإنتاج والتسويق الرقمي، وأدوات تحليل تُمكّنكم من فهم جمهوركم وتحسين أنواع المحتوى.
       </p>
       <p>
         نعمل على بناء شبكة علاقات وشراكات مع علامات تجارية ومؤسسات إعلامية لفتح آفاق تعاون جديدة لصناع المحتوى.
@@ -156,7 +155,7 @@
     <img src="assets/doc.jpg" alt="إنتاج وثائقي" class="doc-img" loading="lazy">
     <div class="doc-text">
       <p>
-        في عالم يتسم بالتنوع، تظل القصص الواقعية هي الأكثر تأثيرًا. نحن نعتبر كل قصة كنزًا يجب صونها ومشاركتها. نستخدم الكاميرا كأداة لفهم التاريخ والإنسانية وبناء سرد قوي ومؤثر.
+        في عالم يتسم بالتنوع، تظل القصص الواقعية هي الأكثر تأثيرًا. نحن نعتبر كل قصة كنزًا يجب صونها ومشاركتها.
       </p>
       <p>انضم إلينا لتوثيق قصتك بطريقة احترافية تصل إلى القلوب والعقول.</p>
     </div>
@@ -182,7 +181,7 @@
     <label for="cv">ارفق سيرتك الذاتية (PDF / Word):</label>
     <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
 
-    <button type="submit" class="btn btn-gold">أرسل طلبك</button>
+    <button type="submit" class="btn">أرسل طلبك</button>
   </form>
 </section>
 
@@ -217,18 +216,26 @@
 </footer>
 
 <script>
+  // القائمة الاحترافية المتحركة
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('main-nav');
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
 
-  // تغيير لون الهيدر عند التمرير
-  const header = document.querySelector('.site-header');
+  // تأثير Parallax للـ HERO
   window.addEventListener('scroll', () => {
-    if(window.scrollY > 50){
+    const hero = document.querySelector('.hero');
+    let offset = window.pageYOffset;
+    hero.style.backgroundPositionY = offset * 0.5 + "px";
+  });
+
+  // إضافة ظل عند التمرير على الهيدر
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if(window.scrollY > 40){
       header.classList.add('scrolled');
-    } else {
+    } else{
       header.classList.remove('scrolled');
     }
   });
