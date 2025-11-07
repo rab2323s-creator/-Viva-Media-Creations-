@@ -64,14 +64,15 @@ html, body { height: 100%; scroll-behavior: smooth; margin:0; font-family:"Segoe
 
 /* =================== قسم خدماتنا الجديد فقط =================== */
 /* 🌑 خلفية متدرجة لقسم الخدمات */
-.services-section {
+
+#services {
   background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
   padding: 80px 0;
   color: #fff;
 }
 
 /* 🎨 تدرّج جميل في بطاقات الخدمات */
-.services-section .service-card {
+#services .service-card {
   background: linear-gradient(145deg, #111111, #1e1e1e);
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
@@ -80,11 +81,12 @@ html, body { height: 100%; scroll-behavior: smooth; margin:0; font-family:"Segoe
   transition: all 0.3s ease;
 }
 
-.services-section .service-card:hover {
+#services .service-card:hover {
   background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.08);
 }
+
 
 .services-rows { display:flex; flex-direction:column; gap:24px; }
 
